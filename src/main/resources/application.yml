@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Web Container Files Static
+  resources:
+    static-locations:
+      - /resources/
+ 
+server:
+  port: 8687
+  context-path: /webcontainerfiles
+    
+
+web:
+  ip: localhost
+  files:
+    statics: http://${web.ip}:${server.port}/${server.context-path}/resources
+    
